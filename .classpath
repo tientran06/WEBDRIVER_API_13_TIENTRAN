@@ -2,6 +2,6 @@
 <classpath>
 	<classpathentry kind="src" path="Selenium"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="Libraries/selenium-server-standalone-2.53.1.jar"/>
+	<classpathentry kind="lib" path="Libraries/selenium-server-standalone-2.53.1.jar" sourcepath="C:/Users/Administrator/Downloads/selenium-master.zip"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
