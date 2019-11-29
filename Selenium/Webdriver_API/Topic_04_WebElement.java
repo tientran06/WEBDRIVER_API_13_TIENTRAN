@@ -9,7 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.server.handler.ClearElement;
+//import org.openqa.selenium.remote.server.handler.ClearElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -26,7 +26,7 @@ public class Topic_04_WebElement {
 	By educationTextAreaBy = By.id("edu");
 	By biographyBy = By.id("bio");
 	By jobRole1By = By.id("job1");
-	By jobRole2By = By.id("job2");
+	By jobRole3By = By.id("job3");
 	By interests1By = By.id("development");
 	By interests2By = By.id("check-disbaled");
 	By slider1By = By.id("slider-1");
@@ -127,13 +127,13 @@ public class Topic_04_WebElement {
 		} else {
 			System.out.println("Element [" + jobRole1By + "] is disable");
 		}
-		WebElement jobRole2 = driver.findElement(jobRole2By);
+		WebElement jobRole2 = driver.findElement(jobRole3By);
 
 		if (jobRole2.isEnabled()) {
-			System.out.println("Element [" + jobRole2By + "] is enable");
+			System.out.println("Element [" + jobRole3By + "] is enable");
 
 		} else {
-			System.out.println("Element [" + jobRole2By + "] is disable");
+			System.out.println("Element [" + jobRole3By + "] is disable");
 		}
 		WebElement interests1 = driver.findElement(interests1By);
 
@@ -221,7 +221,7 @@ public class Topic_04_WebElement {
 		Assert.assertFalse(isElementEnabled(biographyBy));
 		Assert.assertFalse(isElementEnabled(passWordTextboxBy));
 		Assert.assertFalse(isElementEnabled(ageRadioButtonBy));
-		Assert.assertFalse(isElementEnabled(jobRole2By));
+		Assert.assertFalse(isElementEnabled(jobRole3By));
 		Assert.assertFalse(isElementEnabled(interests2By));
 		Assert.assertFalse(isElementEnabled(slider2By));
 		
