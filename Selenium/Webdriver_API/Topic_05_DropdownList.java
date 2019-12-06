@@ -251,6 +251,7 @@ public class Topic_05_DropdownList {
 		driver.get("http://indrimuska.github.io/jquery-editable-select/");
 		inputItemInCustomDropdown("//div[@id ='default-place']/input", "//div[@id ='default-place']/input", "Alfa Romeo");
 		Assert.assertTrue(isDisplayed("//ul[@class ='es-list']/li[@class = 'es-visible selected' and text() ='Alfa Romeo']"));
+		
 	}
 	@Test
 	public void TC_06_Angular() throws Exception {
