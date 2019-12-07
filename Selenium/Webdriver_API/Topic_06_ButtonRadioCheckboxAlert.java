@@ -131,6 +131,28 @@ public class Topic_06_ButtonRadioCheckboxAlert {
 		Thread.sleep(3000);
 	}
 
+	@Test
+	public void TC_05_AuthenticationAlert() {
+		String username = "admin";
+		String password = "admin";
+		driver.get(byPassAuthenticationAlert("http://the-internet.herokuapp.com/basic_auth", username, password));
+		Assert.assertTrue(driver.findElement(By.xpath("//div[@id ='content']//p[contains(text(),'Congratulations! You must have the proper credentials.')]")).isDisplayed());
+
+	}
+
+	// Ham Bypass AuthenticationAlert
+	public String byPassAuthenticationAlert(String url, String username, String password) {
+		System.out.println("Old Url : " + url);
+		// ngat URL thanh 2 phan
+		String[] splitUrl = url.split("//");
+
+		// http://admin:admin@the-internet.herokuapp.com/basic_auth
+		url = splitUrl[0] + "//" + username + ":" + password + "@" + splitUrl[1];
+		System.out.println("New Url : " + url);
+		return url;
+
+	}
+
 	// Hàm click by JS
 	public void clickElementByJavascript(WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
