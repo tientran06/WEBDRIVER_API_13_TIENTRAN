@@ -140,7 +140,7 @@ public class Topic_07_UserInteractions {
 	}
 	
 	@Test
-	public void TC_07_Drag_And_Drop_HTML5() throws InterruptedException, IOException {
+	public void TC_07_Drag_And_Drop_HTML5() throws Exception, IOException {
 		driver.get("http://the-internet.herokuapp.com/drag_and_drop");
 
 		String sourceCss = "#column-a";
