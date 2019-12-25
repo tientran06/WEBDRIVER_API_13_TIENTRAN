@@ -27,7 +27,7 @@ public class Topic_08_popUp_Iframe_Windowns_Tabs {
 	// Pre-Condition
 	@BeforeClass
 	public void beforeClass() {
-		//driver = new FirefoxDriver();
+		// driver = new FirefoxDriver();
 		System.setProperty("webdriver.chrome.driver", ".\\libraries\\chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--lang=vi");
@@ -36,7 +36,7 @@ public class Topic_08_popUp_Iframe_Windowns_Tabs {
 		waitExplicit = new WebDriverWait(driver, 10);
 		// javascript = (JavascriptExecutor) driver;
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		// driver.manage().window().maximize();
+		driver.manage().window().maximize();
 
 	}
 
@@ -133,7 +133,7 @@ public class Topic_08_popUp_Iframe_Windowns_Tabs {
 
 	}
 
-	//@Test
+	@Test
 	public void TC_03_handleWindowns_Tabs2() throws Exception {
 		driver.get("https://kyna.vn/");
 		String parentID = driver.getWindowHandle();
@@ -208,39 +208,54 @@ public class Topic_08_popUp_Iframe_Windowns_Tabs {
 		driver.switchTo().frame(driver.findElement(By.xpath("//div[@class ='fanpage']//iframe")));
 		driver.findElement(By.xpath("//a[text() ='Kyna.vn']")).click();
 		driver.switchTo().defaultContent();
-		switchToWindownByTitle("Kyna.vn - Trang chủ");
+		switchToWindownByTitle("Kyna.vn - Trang chủ | Facebook");
 		Assert.assertEquals(driver.getTitle(), "Kyna.vn - Trang chủ | Facebook");
-		//Assert.assertTrue(driver.findElement(By.xpath("//a[text() ='@kyna.vn']")).isDisplayed());
+		Assert.assertTrue(driver.findElement(By.xpath("//div[@id ='entity_sidebar']//span[text() ='Kyna.vn']")).isDisplayed());
+
+		switchToWindownByTitle("Kyna.vn - Học online cùng chuyên gia");
+		// click KYNA Group
+		clickIntoLocator("//div[@class = 'item']//img[@alt ='kynaforkids.vn']");
+		switchToWindownByTitle("Kynaforkids.vn trường học trực tuyến cho trẻ");
+
+		Assert.assertEquals(driver.getTitle(), "Kynaforkids.vn trường học trực tuyến cho trẻ");
+		Assert.assertTrue(driver.findElement(By.xpath("//div[@class ='logo']//img")).isDisplayed());
 		
 		switchToWindownByTitle("Kyna.vn - Học online cùng chuyên gia");
+		clickIntoLocator("//div[@class = 'item']//img[@alt ='kynabiz.vn']");
+		switchToWindownByTitle("Giải pháp đào tạo nhân sự online toàn diện - KynaBiz.vn");
+		Assert.assertEquals(driver.getTitle(), "Giải pháp đào tạo nhân sự online toàn diện - KynaBiz.vn");
+		Assert.assertTrue(driver.findElement(By.xpath("//div[@class =' container']//img[@class ='img-fluid' and @src ='/img/kynabiz.png']")).isDisplayed());
 		
+
+		switchToWindownByTitle("Kyna.vn - Học online cùng chuyên gia");
+
 		closeAllWindownswithoutParentID(parentID);
 		Thread.sleep(2000);
 
 	}
 
-	@Test
+	//@Test
 	public void TC_04_handleWindowns_Tabs3() throws Exception {
 		driver.get("http://live.guru99.com/index.php/");
 		clickIntoLocator("//a[text() ='Mobile']");
 		clickIntoLocator("//a[text() ='Sony Xperia']/parent::h2//following-sibling::div[@class ='actions']//a[text() ='Add to Compare']");
 		Assert.assertTrue(driver.findElement(By.xpath("//span[text() ='The product Sony Xperia has been added to comparison list.']")).isDisplayed());
-		
+
 		clickIntoLocator("//a[text() ='Samsung Galaxy']/parent::h2//following-sibling::div[@class ='actions']//a[text() ='Add to Compare']");
 		Assert.assertTrue(driver.findElement(By.xpath("//span[text() ='The product Samsung Galaxy has been added to comparison list.']")).isDisplayed());
-		
+
 		clickIntoLocator("//button[@title ='Compare']");
 		switchToWindownByTitle("Products Comparison List - Magento Commerce");
 		Assert.assertEquals(driver.getTitle(), "Products Comparison List - Magento Commerce");
 		driver.close();
 		Thread.sleep(2000);
 		switchToWindownByTitle("Mobile");
-		
+
 		clickIntoLocator("//a[text() ='Clear All']");
 		driver.switchTo().alert().accept();
 		Assert.assertTrue(driver.findElement(By.xpath("//span[text() ='The comparison list was cleared.']")).isDisplayed());
 	}
-	
+
 	// Hàm Switch to Windown by ID >> Lấy ra tất cả các ID, sau đó đi so sánh nếu khác parentID thì switch vào
 
 	public void switchToWindowByID(String parentID) {
