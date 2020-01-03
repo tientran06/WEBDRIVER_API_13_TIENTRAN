@@ -70,7 +70,7 @@ public class Topic_10_UploadFiles {
 		Assert.assertTrue(findElement("//a[text() ='picture5.jpg']").isDisplayed());
 	}
 
-	//@Test
+	@Test
 	public void TC_02_uploadFilebyRobot() throws Exception {
 		driver.get("http://blueimp.github.com/jQuery-File-Upload/");
 
@@ -109,7 +109,7 @@ public class Topic_10_UploadFiles {
 		Assert.assertTrue(findElement("//a[text() ='picture4.jpg']").isDisplayed());
 	}
 	
-	@Test
+	//@Test
 	public void TC_03_autoIT() throws Exception {
 		driver.get("http://blueimp.github.com/jQuery-File-Upload/");
 
