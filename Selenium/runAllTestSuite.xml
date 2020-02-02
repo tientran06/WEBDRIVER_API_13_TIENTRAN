@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Run All Test Suite">
+  <suite-files>
+  	<suite-file path = "runTestCases01.xml"/>
+  	<suite-file path = "runTestCases02.xml"/>
+  </suite-files>
+</suite> 

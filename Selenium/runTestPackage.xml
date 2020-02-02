@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Run Test Package" parallel="false">
+  
+  <test name="Run testcase on Chrome">
+  	<parameter name = "browser" value = "chrome"></parameter>
+    <packages>
+    	<package name = "testng_framework"/>
+    </packages>
+  </test> 
+  
+</suite> 

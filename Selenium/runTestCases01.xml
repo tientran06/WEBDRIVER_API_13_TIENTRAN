@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Run TestCases 01" parallel="tests" thread-count = "2">
+  <test name="TestNG Framework">
+  <!--  	
+  <groups>
+  		<run>
+  			<include name = "shopping"/>
+  			<include name = "buying"/>
+  			<include name = "customer"/>
+  		</run>
+  	</groups>
+  -->
+    <classes>
+<!--       <class name="testng_framework.Part_III_DataProvider"/> -->
+    </classes>
+  </test> 
+  
+  <test name="Run testcase on Chrome">
+  	<parameter name = "browser" value = "chrome"></parameter>
+    <classes>
+      <class name="testng_framework.Part_III_DataProvider"/>
+    </classes>
+  </test> 
+  
+  <test name="Run testcase on Firefox">
+  	<parameter name = "browser" value = "firefox"></parameter>
+    <classes>
+      <class name="testng_framework.Part_III_DataProvider"/>
+    </classes>
+  </test> 
+</suite> 

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Run Testcases 02" parallel="false">
+  <test name="TestNG Framework">
+  
+    <classes>
+<!--       <class name="testng_framework.Part_III_DataProvider"/> -->
+    </classes>
+  </test> 
+  
+  <test name="Run testcase on Chrome">
+  	<parameter name = "browser" value = "chrome"></parameter>
+    <classes>
+      <class name="testng_framework.Part_V_Dependences"/>
+      <class name="testng_framework.Part_IV_Loop"/>
+    </classes>
+  </test> 
+  
+</suite> 
