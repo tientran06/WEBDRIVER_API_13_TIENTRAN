@@ -10,8 +10,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -47,7 +45,7 @@ public class Topic_08_windowns_Tabs {
 			Thread.sleep(3000);
 		}
 
-		String parentID = driver.getWindowHandle();
+	//	String parentID = driver.getWindowHandle();
 
 //		clickElementbyJS(driver.findElement(By.xpath("//a[@title ='IOS']//img")));
 //		switchToWindownByTitle("‎KYNA on the App Store");
