@@ -39,6 +39,7 @@ public class Topic_05_DropdownList {
 	// Pre-Condition
 	@BeforeClass
 	public void beforeClass() {
+		System.setProperty("webdriver.gecko.driver", ".\\libraries\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		javascript = (JavascriptExecutor) driver;
 		waitExplicit = new WebDriverWait(driver, 10);
@@ -49,7 +50,7 @@ public class Topic_05_DropdownList {
 	}
 
 	@Test
-	public void TC_01_defaultDropDownList() throws InterruptedException {
+	public void TC_01_DefaultDropDownList() throws InterruptedException {
 		driver.get("https://automationfc.github.io/basic-form/index.html");
 		select = new Select(driver.findElement(By.xpath("//select[@id ='job1']")));
 
@@ -125,10 +126,9 @@ public class Topic_05_DropdownList {
 		Assert.assertFalse(arrayUnselected.contains("Mobile"));
 		Assert.assertFalse(arrayUnselected.contains("Desktop"));
 		Assert.assertFalse(arrayUnselected.contains("Security"));
-	}
-
+}
 	@Test
-	public void TC_02_defaultDropDownList2() {
+	public void TC_02_DefaultDropDownList2() {
 		driver.get("https://demo.nopcommerce.com/");
 		driver.findElement(By.xpath("//a[text() ='Register']")).click();
 		driver.findElement(By.xpath("//input[@name ='Gender' and @value ='F']")).click();
@@ -186,7 +186,7 @@ public class Topic_05_DropdownList {
 	}
 
 	@Test
-	public void TC_03_dropDownListJQuery() {
+	public void TC_03_DropDownListJQuery() {
 
 		driver.get("http://jqueryui.com/resources/demos/selectmenu/default.html");
 

@@ -171,7 +171,6 @@ public class Topic_04_WebElement {
 
 	@Test
 	public void TC_03_ElementSelected() throws InterruptedException {
-
 		// Step 01 - select Radio Age_Under18 and Development checkbox
 		WebElement ageUnder18Radio = driver.findElement(ageUnder18RadioBy);
 		ageUnder18Radio.click();
@@ -185,8 +184,9 @@ public class Topic_04_WebElement {
 		// Step 03 - bỏ chọn Development checkbox
 		interests1.click();
 		Assert.assertFalse(interests1.isSelected());
-	}
-
+		}
+	
+		
 	@Test
 	public void TC_04_ElementDisplayed_2() throws InterruptedException {
 
@@ -208,7 +208,6 @@ public class Topic_04_WebElement {
 		}
 		Thread.sleep(5000);
 	}
-	
 	@Test
 	public void TC_05_ElementEnabled_Disabled_2() {
 		System.out.println("Result of TC_05 is: ");
@@ -241,7 +240,6 @@ public class Topic_04_WebElement {
 		Assert.assertFalse(isElementSelected(interests1By));
 		
 	}
-	
 	public boolean isElementDisplayed(By by) {
 		WebElement element = driver.findElement(by);
 		if (element.isDisplayed()) {

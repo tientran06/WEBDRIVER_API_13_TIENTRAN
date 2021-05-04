@@ -129,7 +129,7 @@ public class Topic_08_popUp_Iframe_Windowns_Tabs {
 		driver.switchTo().window(parentID);
 		Assert.assertEquals(driver.getTitle(), "SELENIUM WEBDRIVER FORM DEMO");
 
-	}
+}
 
 	@Test
 	public void TC_03_handleWindowns_Tabs2() throws Exception {

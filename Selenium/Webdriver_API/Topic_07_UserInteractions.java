@@ -76,8 +76,7 @@ public class Topic_07_UserInteractions {
 		int selectedSize = selectedNumbers.size();
 		Assert.assertEquals(selectedSize, 8);
 		System.out.println("number is selected " + selectedSize);
-	}
-
+}
 	@Test
 	public void TC_03_ClickandHoldRandom() throws Exception {
 		driver.get("http://jqueryui.com/resources/demos/selectable/display-grid.html");

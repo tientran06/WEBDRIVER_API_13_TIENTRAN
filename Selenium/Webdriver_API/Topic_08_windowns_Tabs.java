@@ -52,7 +52,7 @@ public class Topic_08_windowns_Tabs {
 //		Assert.assertEquals(driver.getTitle(), "‎KYNA on the App Store");
 
 		
-	}
+}
 
 	// Hàm Switch to Windown by Title
 	// >> Lấy ra tất cả các ID, switch vào từng ID, sau đó getTitle và so sánh nếu đúng Title mong đợi thì Switch vào

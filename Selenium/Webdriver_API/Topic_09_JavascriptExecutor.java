@@ -63,7 +63,7 @@ public class Topic_09_JavascriptExecutor {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 
-	}
+}
 
 	// @Test
 	public void TC_01_JS() throws Exception {

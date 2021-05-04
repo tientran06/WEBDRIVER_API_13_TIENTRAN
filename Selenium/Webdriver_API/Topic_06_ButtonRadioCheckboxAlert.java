@@ -157,8 +157,7 @@ public class Topic_06_ButtonRadioCheckboxAlert {
 	public void clickElementByJavascript(WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", element);
-	}
-
+}
 	// Hàm check xem element co dc Select ko
 	public boolean isSelected(WebElement element) {
 		if (element.isSelected()) {
@@ -169,7 +168,6 @@ public class Topic_06_ButtonRadioCheckboxAlert {
 			return false;
 		}
 	}
-
 	// Hàm Enable
 	public boolean isEnable(WebElement element) {
 		if (element.isEnabled()) {
