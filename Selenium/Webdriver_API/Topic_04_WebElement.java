@@ -184,9 +184,8 @@ public class Topic_04_WebElement {
 		// Step 03 - bỏ chọn Development checkbox
 		interests1.click();
 		Assert.assertFalse(interests1.isSelected());
-		}
+	}
 	
-		
 	@Test
 	public void TC_04_ElementDisplayed_2() throws InterruptedException {
 

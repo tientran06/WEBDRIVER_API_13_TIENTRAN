@@ -3,6 +3,7 @@ package Webdriver_API;
 import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -14,8 +15,6 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import com.sun.glass.events.KeyEvent;
 
 public class Topic_10_UploadFiles {
 	WebDriver driver;
